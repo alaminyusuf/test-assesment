@@ -1,6 +1,6 @@
 import BgImage from "../../img/bg.jpg";
 
-function MasterHead() {
+function Hero() {
 	return (
 		<div className='masterhead'>
 			<div
@@ -8,14 +8,14 @@ function MasterHead() {
 					backgroundImage: `url(${BgImage})`,
 					backgroundRepeat: "no-repeat",
 					height: "100%",
-					maxHeight: "450px",
+					maxHeight: "600px",
 					backgroundPosition: "center",
 					backgroundSize: "cover",
 					position: "relative",
 				}}
 				className='hero-image'
 			></div>
-			<div className='ccc'>
+			<div className='overlay'>
 				<div className='hero-text'>
 					stop the wait and make an investment today
 					<div className='quote'>no more procasination</div>
@@ -25,4 +25,4 @@ function MasterHead() {
 	);
 }
 
-export default MasterHead;
+export default Hero;

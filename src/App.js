@@ -1,12 +1,12 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
-import MasterHead from "./components/MasterHead";
+import Hero from "./components/Hero";
 
 function App() {
 	return (
 		<div className='App'>
 			<Navbar />
-			<MasterHead />
+			<Hero />
 		</div>
 	);
 }

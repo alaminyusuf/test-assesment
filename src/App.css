@@ -4,6 +4,11 @@
 	box-sizing: border-box;
 }
 
+:root {
+	--primary-color: #f6f6f6;
+	--secondary-color: rgb(225, 182, 9);
+}
+
 nav {
 	height: 60px;
 	background-color: #131516;
@@ -48,22 +53,127 @@ a {
 .auth-section button {
 	border-radius: 24px;
 	margin-right: 1em;
-	/* max-width: 131px; */
 	text-transform: capitalize;
 	font-size: 15px;
 }
 
 .login {
-	color: #f6f6f6;
-	background-color: rgb(189, 141, 19);
+	color: var(--primary-color);
+	background-color: var(--secondary-color);
 	border: none;
 	padding: 0.9em 2em !important;
 }
 
+.login:hover {
+	color: #000;
+}
+
 .create-account {
 	padding: 0.8em 1.6em;
-	border: rgb(189, 141, 19) solid 1.8px;
-	color: rgb(189, 141, 19);
+	border: var(--secondary-color) solid 1.8px;
+	color: var(--secondary-color);
 	background-color: #131516;
 	outline: none;
+}
+
+.create-account:hover {
+	color: var(--primary-color);
+}
+
+/* body,
+html {
+	height: 100%;
+} */
+
+.masterhead {
+	height: 600px;
+}
+
+.responsive {
+	width: 100%;
+	height: auto;
+	max-height: 450px;
+}
+
+/* .hero-image {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative; 
+}*/
+
+.ccc {
+	position: absolute;
+	top: 60px;
+	right: 0;
+	width: 100%;
+	margin-left: auto;
+	height: 450px;
+	background: linear-gradient(rgba(28, 28, 28, 0.5), rgba(21, 21, 21, 0.5));
+}
+
+.hero-text {
+	font-weight: 300;
+	text-align: right;
+	margin: auto 0;
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	transform: translate(-30%, -50%);
+	color: white;
+	text-transform: capitalize;
+	font-size: 2.8rem;
+	letter-spacing: 2px;
+}
+
+.quote {
+	color: var(--secondary-color) !important;
+	font-size: 1.35rem;
+	margin: 0.5em 0;
+}
+
+@media (max-width: 532px) {
+	.ccc {
+		height: 600px;
+	}
+
+	.hero-image {
+		max-height: 650px !important;
+	}
+
+	.hero-text {
+		text-align: center;
+		transform: translate(-50%, -50%);
+		font-size: 2rem;
+		width: 75%;
+		line-height: 1.4;
+	}
+
+	.show-on-small-screen {
+		display: none;
+	}
+
+	.auth-section {
+		display: none;
+	}
+}
+
+@media (min-width: 533px) {
+	nav {
+		justify-content: space-between;
+	}
+
+	.branding {
+		margin: auto 0;
+		flex: unset !important;
+	}
+
+	.show-on-small-screen {
+		/* width: 100%; */
+		flex: unset !important;
+		justify-self: self-end;
+	}
+	.auth-section {
+		display: none;
+	}
 }
